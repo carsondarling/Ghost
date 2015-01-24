@@ -15,6 +15,9 @@ express = require('express');
 ghost = require('./core');
 errors = require('./core/server/errors');
 
+// Custom helpers
+require('./custom/helpers')();
+
 // Create our parent express app instance.
 parentApp = express();
 

@@ -176,6 +176,8 @@ frontendControllers = {
                     }
 
                     setResponseContext(req, res);
+                    res.set('Content-Type', 'application/json');
+                    res.set('Access-Control-Allow-Origin', '*');
                     res.render(view, formatPageResponse(posts, page));
                 });
             });
@@ -231,6 +233,8 @@ frontendControllers = {
                         return next();
                     }
                     setResponseContext(req, res);
+                    res.set('Content-Type', 'application/json');
+                    res.set('Access-Control-Allow-Origin', '*');
                     res.render(view, result);
                 });
             });
@@ -287,6 +291,8 @@ frontendControllers = {
                     }
 
                     setResponseContext(req, res);
+                    res.set('Content-Type', 'application/json');
+                    res.set('Access-Control-Allow-Origin', '*');
                     res.render(view, result);
                 });
             });
@@ -362,7 +368,8 @@ frontendControllers = {
                             response = formatResponse(post);
 
                         setResponseContext(req, res, response);
-
+                        res.set('Content-Type', 'application/json');
+                        res.set('Access-Control-Allow-Origin', '*');
                         res.render(view, response);
                     });
                 });
